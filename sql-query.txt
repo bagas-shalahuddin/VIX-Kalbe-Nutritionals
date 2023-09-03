@@ -1,0 +1,38 @@
+1. Usia rata-rata berdasarkan status pernikahan:
+
+   Menghitung usia rata-rata dan membulatkannya untuk berbagai kategori status pernikahan dalam data "customer". Hasilnya dikelompokkan berdasarkan status pernikahan.
+   SQL CODE : 
+
+`select maritalstatus ,round(avg(age)) as rata_rata_umur
+from customer 
+group by maritalstatus`
+
+2. Usia rata-rata pelanggan berdasarkan jenis kelamin:
+
+   Menentukan usia rata-rata dan membulatkannya untuk berbagai kelompok jenis kelamin dalam data "customer". Hasilnya dikelompokkan berdasarkan jenis kelamin.
+
+`select gender  ,round(avg(age))  as rata_rata_umur
+from customer 
+group by gender`
+
+3. Nama toko dengan total kuantitas terbanyak:
+
+   Mencari nama toko yang memiliki total kuantitas terbanyak dengan menjumlahkan kolom "Qty", mempertimbangkan data dari tabel "store" dan "transaction". Hasilnya dikelompokkan berdasarkan nama toko dan diurutkan secara menurun berdasarkan total kuantitas.
+
+`select s.storename, sum(t."Qty" ) as total_qty
+from store s 
+left join transaction as t 
+on s.storeid = t."StoreID" 
+group by 1 
+order by 2 desc`
+
+4. Produk terlaris berdasarkan total jumlah:
+
+   Mengidentifikasi nama produk yang memiliki total jumlah terbanyak dengan menjumlahkan kolom "TotalAmount", menggunakan data dari tabel "product" dan "transaction". Hasilnya dikelompokkan berdasarkan nama produk dan diurutkan secara menurun berdasarkan total jumlah.
+
+`select p.productname, sum(t."TotalAmount") as total_amount
+from product p 
+left join transaction as t 
+on p.productid = t."ProductID" 
+group by 1
+order by 2 desc`
