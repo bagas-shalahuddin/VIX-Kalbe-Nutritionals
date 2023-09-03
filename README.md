@@ -5,6 +5,6 @@ The Kalbe Nutritionals Data Scientist Project Based Internship Program is organi
 - Data Visualization: Tableau [Dashboard]()
 - Machine Learning: [Forecasting](kalbe-ml-time-series.ipynb)
 - Machine Learning: [Clustering](kalbe-clustering.ipynb)
-- Final Assignment: [Challenge](FinalTask_Kalbe_DS_Bagas Shalahuddin Wahid.pdf.pdf)
+- Final Assignment: [Challenge](https://github.com/bagas-shalahuddin/VIX-Kalbe-Nutritionals/blob/main/FinalTask_Kalbe_DS_Bagas%20Shalahuddin%20Wahid.pdf.pdf)
 
 In this internship, participants will gain practical experience in various aspects of data science, including database management, data visualization, and machine learning, ultimately culminating in a challenging final task.
